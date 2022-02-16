@@ -1,12 +1,5 @@
-from cohortextractor import (
-    StudyDefinition,
-    patients,
-    codelist,
-    codelist_from_csv,
-    # combine_codelists,
-)
+from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
 
-from codelists import *
 
 study = StudyDefinition(
     default_expectations={
@@ -14,9 +7,9 @@ study = StudyDefinition(
         "rate": "uniform",
         "incidence": 0.5,
     },
-    population=patients.registered_with_one_practice_between(
-        "2019-02-01", "2020-02-01"
-    ),
+    population=patients.all(),
+#        "2019-02-01", "2020-02-01"
+    #),
 
 ### AGE ###
 

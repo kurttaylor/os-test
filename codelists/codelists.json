@@ -1,3 +1,28 @@
 {
-  "files": {}
+  "files": {
+    "opensafely-aplastic-anaemia.csv": {
+      "id": "opensafely/aplastic-anaemia/2020-04-24",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/aplastic-anaemia/2020-04-24/",
+      "downloaded_at": "2022-02-16 13:51:16.960828Z",
+      "sha": "bd34ff54f789dce031e3581006cc0befcee0b35c"
+    },
+    "opensafely-asplenia.csv": {
+      "id": "opensafely/asplenia/2020-06-02",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/asplenia/2020-06-02/",
+      "downloaded_at": "2022-02-16 13:51:17.154673Z",
+      "sha": "7599ea87a8f3d9d92389a728966d3077b00ac828"
+    },
+    "opensafely-current-asthma.csv": {
+      "id": "opensafely/current-asthma/2020-05-06",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/current-asthma/2020-05-06/",
+      "downloaded_at": "2022-02-16 13:51:17.310206Z",
+      "sha": "1bd6c0cd0553edb334f7efc860d06c8f18fc6d50"
+    },
+    "primis-covid19-vacc-uptake-bmi_stage.csv": {
+      "id": "primis-covid19-vacc-uptake/bmi_stage/v1.2",
+      "url": "https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/bmi_stage/v1.2/",
+      "downloaded_at": "2022-02-16 13:51:17.474054Z",
+      "sha": "7fd744bb94c1789632247a3fc1780910f421b172"
+    }
+  }
 }
