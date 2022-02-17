@@ -121,6 +121,25 @@ ethnicity_6_sus=patients.with_ethnicity_from_sus(
         "category": {"ratios": {"1": 0.2, "2": 0.2, "3": 0.2, "4": 0.2, "5": 0.2}},
         "incidence": 0.8,
     },
-    )
+    ),
 
+### ASTHMA
+
+    asthma = patients.with_these_clinical_events(
+        asthma_codes,
+        returning = 'binary_flag',
+        return_expectations={
+            "incidence": 0.15,
+        }
+    ),
+
+# ### aplastic anaemia 
+
+aplastic_anaemia = patients.with_these_clinical_events(
+        aplastic_anaemia_codes,
+        returning = 'binary_flag',
+        return_expectations={
+            "incidence": 0.04,
+        }
+    )
 )
