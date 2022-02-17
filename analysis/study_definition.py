@@ -1,9 +1,12 @@
+import numpy as np
+np.random.seed(57683) # change this number to one for which your scripts successfully run on the dummy data
+
 from cohortextractor import (
     StudyDefinition,
     patients,
     codelist,
     codelist_from_csv,
-    # combine_codelists,
+    combine_codelists,
 )
 
 from codelists import *
