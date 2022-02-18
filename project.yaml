@@ -23,6 +23,6 @@ actions:
     needs: [generate_study_population]
     outputs:
       moderately_sensitive:
-        html: output/descriptive/tables/table*.html
-        csv:  output/descriptive/tables/table*.csv
+        html: output/table*.html
+        csv:  output/table*.csv
         
