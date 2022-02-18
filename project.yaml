@@ -10,14 +10,6 @@ actions:
     outputs:
       highly_sensitive:
         cohort: output/input.csv
-    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
-    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
-
-  # generate_study_population:
-  #   run: cohortextractor:latest generate_cohort --study-definition study_definition_flow_chart
-  #   outputs:
-  #     highly_sensitive:
-  #       cohort: output/input_flow_chart.csv
 
   describe:
     run: r:latest analysis/report.R
