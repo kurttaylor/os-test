@@ -50,8 +50,8 @@ table1_strata <- data_cohort %>%
 # table1_strata_redacted <- redact_tblsummary(table1_strata, 5, "[REDACTED]")
 
 # Save to CSV files
-write.csv(table1_all$table_body, here::here("output", "descriptive", "tables", "table1.csv"))
-write.csv(table1_strata$df_by, here::here("output", "descriptive", "tables", "table1_asthma.csv"))
+write_csv(table1_all$table_body, here::here("output", "descriptive", "tables", "table1.csv"))
+write_csv(table1_strata$df_by, here::here("output", "descriptive", "tables", "table1_asthma.csv"))
 # Save to HTML 
 gtsave(as_gt(table1_all), here::here("output", "descriptive", "tables", "table1.html"))
 gtsave(as_gt(table1_strata), here::here("output", "descriptive", "tables", "table1_asthma.html"))
