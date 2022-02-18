@@ -12,9 +12,9 @@ library('glue')
 library('gt')
 library('gtsummary')
 
-## import functions ----
-
-source(here("analysis", "functions", "redaction_functions.R"))
+# ## import functions ----
+# 
+# source(here("analysis", "functions", "redaction_functions.R"))
 
 ## Import processed data ----
 data_cohort <- read_csv(here("output", "input.csv"))
@@ -36,10 +36,9 @@ data_cohort$tbl_dummy <- as.factor(data_cohort$tbl_dummy)
 
 table1_all <- data_cohort %>%
   select(age, sex, bmi, imd, ethnicity_6_sus, asthma, aplastic_anaemia, tbl_dummy) %>%
-  tbl_summary(statistic = list(all_continuous() ~ "{mean} ({sd})"),
-              by = tbl_dummy)
+  tbl_summary(statistic = list(all_continuous() ~ "{mean} ({sd})"))
 
-table1_all_redacted <- redact_tblsummary(table1_all, 5, "[REDACTED]")
+# table1_all_redacted <- redact_tblsummary(table1_all, 5, "[REDACTED]")
 
 # STRATIFY BY ASTHMA
 
@@ -48,7 +47,7 @@ table1_strata <- data_cohort %>%
   tbl_summary(statistic = list(all_continuous() ~ "{mean} ({sd})"),
               by = asthma)
 
-table1_strata_redacted <- redact_tblsummary(table1_strata, 5, "[REDACTED]")
+# table1_strata_redacted <- redact_tblsummary(table1_strata, 5, "[REDACTED]")
 
 # Save to CSV files
 write.csv(table1_all$table_body, here("output", "descriptive", "tables", "table1.csv"))
