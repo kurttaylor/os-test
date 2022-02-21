@@ -1,7 +1,7 @@
 version: "3.0"
 
 expectations:
-  population_size: 1000
+  population_size: 10000
 
 actions:
 
@@ -17,6 +17,7 @@ actions:
     outputs:
       moderately_sensitive:
         cohort: output/descriptive.png
+        hist_asthma: output/hist_asthma.png
 
   describe_table1:
     run: r:latest analysis/table_1.R
